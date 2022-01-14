@@ -1,0 +1,73 @@
+.add-comment {
+    grid-area: add;
+    background: white;
+    box-shadow: inset 0 0 1px 1px rgba(161, 153, 153, 0.84);
+}
+
+.add-comment__container {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-comment__message {
+    width: 80%;
+    height: 100px;
+    margin: 10px;
+}
+
+.add-comment__message textarea {
+    background: linear-gradient(white, #f5f1f1);
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 0 1px 1px rgba(161, 153, 153, 0.84);
+    padding: 10px;
+    outline: none;
+    width: 100%; /* Ширина поля в процентах */
+    height: 100%; /* Высота поля в пикселах */
+    resize: none; /* Запрещаем изменять размер */
+}
+
+.add-comment__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 100%;
+}
+
+
+.add-comment__name input {
+    background: linear-gradient(white, #f5f1f1);
+    border-radius: 5px;
+    border: none;
+    box-shadow: inset 0 0 1px 1px rgba(161, 153, 153, 0.84);
+    outline: none;
+    padding: 5px;
+    width: 100%;
+}
+
+.add-comment__post-btn {
+    position: relative;
+    height: 30px;
+}
+
+.alert {
+    background: white;
+    box-shadow: inset 0 0 2px 1px #9a9696;
+    text-align: center;
+    padding-top: 5px;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    left: 350px;
+    top: 131px;
+}
+
+.alert.active {
+    transform: translateX(0px) scale(1, 1);
+    opacity: 0.8;
+    transition: all 1s linear;
+}

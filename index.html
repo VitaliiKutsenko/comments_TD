@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <script defer src="app.js" type="module"></script>
-    </head>
-    <body>
-        <div id="root">
-            <div class="interface__comment">
-                <ul class="comment"></ul>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <!--        <script defer src="src/app.js" type="module"></script>-->
+</head>
+<body>
+<div id="root">
+    <form class="add-comment" action="/" method="POST" id="form">
+        <div class="add-comment__container">
+            <label class="add-comment__message">
+                <textarea required
+                          name="text"
+                          id="add-comment__area"
+                          placeholder="Ваш комментарий..."
+                ></textarea>
+            </label>
+            <div class="add-comment__form">
+                <label class="add-comment__name">
+                    <input required autocomplete="off" type="text" id="add-comment__input" name="name"
+                           placeholder="Имя пользователя"/>
+                </label>
+                <input type="submit" class="add-comment__post-btn navigation-comment__btn">
             </div>
-            <submit class="add_comment">
-                <label for="text">
-                    <input type="text" class="text" />
-                </label>
-                <label for="comments">
-                    <textarea
-                        name="comments"
-                        id=""
-                        cols="30"
-                        rows="10"
-                    ></textarea>
-                </label>
-            </submit>
         </div>
-    </body>
+    </form>
+    <div class="interface-comment">
+    </div>
+    <div class="navigation-comment">
+        <div class="navigation_comment__pagination">
+        </div>
+        <button class="navigation-comment__btn">Показать ещё</button>
+    </div>
+</div>
+</body>
 </html>

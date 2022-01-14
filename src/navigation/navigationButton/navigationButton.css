@@ -1,0 +1,38 @@
+.navigation-comment {
+    background: white;
+    box-shadow: inset 0 0 1px 1px rgba(161, 153, 153, 0.84);
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.navigation_comment__pagination {
+
+}
+
+.navigation_comment__pagination .btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 2px;
+    transition: 5s linear forwards;
+}
+
+.navigation-comment__btn {
+    margin: 5px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.btn.active {
+    box-shadow: inset 10px 5px 10px 1px rgba(121, 106, 106, 0.42);
+}
