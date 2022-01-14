@@ -1,0 +1,40 @@
+@import "./normalize.css";
+@import "./comments/comments.css";
+@import "./navigation/navigationButton/navigationButton.css";
+@import "./form/form.css";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to left top, white, #d5cece);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#root {
+    width: 21cm;
+    height: 97vh;
+    display: grid;
+    grid-template-areas: "add" "interface" "nav";
+    grid-template-rows: 3fr 8fr 1fr;
+    gap: 5px;
+}
+
+.interface-comment {
+    background: white;
+    box-shadow: inset 0 0 1px 1px rgba(161, 153, 153, 0.84);
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 100%;
+    align-items: center;
+    overflow: auto;
+    grid-area: interface;
+}
