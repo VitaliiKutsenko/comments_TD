@@ -5,7 +5,6 @@ import {cleanComments} from "./helper/cleanComments";
 import './style.css'
 
 const URL = 'https://jordan.ashton.fashion/api/goods/30/comments'
-const page = null
 
 export async function fetches(page = 1, url = URL) {
 
