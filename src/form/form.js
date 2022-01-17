@@ -19,11 +19,9 @@ export function createdForm(URL, page) {
 			inputText.value = ''
 			alert(form)
 			cleanComments(page)
-
 		}
 	}
 	form.addEventListener('submit', forms, {once: true})
-
 }
 
 function alert(elem) {
