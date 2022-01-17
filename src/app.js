@@ -26,12 +26,15 @@ export async function fetches(page = 1, url = URL) {
 		const btns = document.querySelectorAll('.btn');
 		const itemHandler = (e) => {
 			const url = e.target.dataset.btn
-			createdForm(URL, +url)
 			cleanComments(+url)
 		}
 		Array.from(btns).map(item => {
 			item.addEventListener('click', itemHandler)
 		})
+		return item
+	}).then(data => {
+		const postForm = document.querySelector('.add-comment__post-btn')
+		postForm.onclick = () => createdForm(URL,data.current_page)
 	})
 		.catch(item => console.log(`${item} is not defined`));
 }

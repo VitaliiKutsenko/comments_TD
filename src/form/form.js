@@ -1,9 +1,11 @@
 import $el from '../helper/createElem.js'
 import {cleanComments} from "../helper/cleanComments";
 
+const {form} = document.forms
+
 export function createdForm(URL, page) {
-	const {form} = document.forms
-	form.addEventListener('submit', async (e) => {
+
+	const forms = async (e) => {
 		e.preventDefault()
 		const formData = new FormData(form)
 		let response = await fetch(URL, {
@@ -11,12 +13,17 @@ export function createdForm(URL, page) {
 			body: formData
 		})
 		if (response.status === 200) {
-			e.target.lastElementChild.children[0].children[0].value = ''
-			e.target.lastElementChild.children[1].children[0].children[0].value = ''
+			const inputTextarea = document.querySelector('#add-comment__area')
+			const inputText = document.querySelector("#add-comment__input")
+			inputTextarea.value = ''
+			inputText.value = ''
 			alert(form)
 			cleanComments(page)
+
 		}
-	})
+	}
+	form.addEventListener('submit', forms, {once: true})
+
 }
 
 function alert(elem) {
